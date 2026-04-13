@@ -8,3 +8,6 @@ dependencies = [
     "rich>=14.3.3",
     "viv-utils>=0.8.1",
 ]
+
+[tool.uv]
+exclude-newer = "1 week"

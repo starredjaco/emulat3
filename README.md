@@ -26,35 +26,35 @@ uv sync
 
 ```bash
 # Emulate from the entry point
-python emu_stepper.py --pe xor.exe
+uv run emulat3.py --pe xor.exe
 
 # Emulate a specific function
-python emu_stepper.py --pe xor.exe --va 0x140001010 --max 100
+uv run emulat3.py --pe xor.exe --va 0x140001010 --max 100
 
 # List all functions in the binary
-python emu_stepper.py --pe xor.exe --list
+uv run emulat3.py --pe xor.exe --list
 
 # Follow calls into a specific subroutine
-python emu_stepper.py --pe xor.exe --va 0x1400014c1 --follow-va 0x140001450
+uv run emulat3.py --pe xor.exe --va 0x1400014c1 --follow-va 0x140001450
 
 # Follow all calls into non-library subroutines
-python emu_stepper.py --pe xor.exe --va 0x1400014c1 --follow-calls
+uv run emulat3.py --pe xor.exe --va 0x1400014c1 --follow-calls
 ```
 
 ### Shellcode mode
 
 ```bash
 # Raw binary shellcode
-python emu_stepper.py --shellcode payload.bin
+uv run emulat3.py --shellcode payload.bin
 
 # Hex-encoded file
-python emu_stepper.py --shellcode encoded.txt --hex
+uv run emulat3.py --shellcode encoded.txt --hex
 
 # Inline hex string
-python emu_stepper.py --sc-hex "4831c04889c7c3"
+uv run emulat3.py --sc-hex "4831c04889c7c3"
 
 # \x notation also works
-python emu_stepper.py --sc-hex "\x48\x31\xc0\xc3"
+uv run emulat3.py --sc-hex "\x48\x31\xc0\xc3"
 ```
 
 ### Options
